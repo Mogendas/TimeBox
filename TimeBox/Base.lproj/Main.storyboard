@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,113 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimeBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sS-Ef-v9y">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="187.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYL-jF-IeH">
+                                <rect key="frame" x="0.0" y="187.5" width="667" height="187.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JRx-qN-c0S">
+                                        <rect key="frame" x="21.5" y="19" width="624" height="150"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="828-X5-bup">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="828-X5-bup" secondAttribute="height" multiplier="1:1" id="rwO-GP-g9V"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="5" backgroundImage="BlueOff">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="firstButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySB-r6-TxW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yey-2d-2Jk">
+                                                <rect key="frame" x="158" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yey-2d-2Jk" secondAttribute="height" multiplier="1:1" id="rCI-qc-A2k"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="10" backgroundImage="GreenOff">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="secondButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hq2-Ti-w5i"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOB-Ve-LQy">
+                                                <rect key="frame" x="316" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="xOB-Ve-LQy" secondAttribute="height" multiplier="1:1" id="mkZ-3Q-vDp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="15" backgroundImage="YellowOff">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="thirdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQQ-Zv-c6K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80o-6B-MuC">
+                                                <rect key="frame" x="474" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="80o-6B-MuC" secondAttribute="height" multiplier="1:1" id="xAj-ez-ZfE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="20" backgroundImage="RedOff">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="forthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVF-IF-0qp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="JRx-qN-c0S" firstAttribute="centerY" secondItem="fYL-jF-IeH" secondAttribute="centerY" id="8LR-Wb-Bbf"/>
+                                    <constraint firstItem="JRx-qN-c0S" firstAttribute="centerX" secondItem="fYL-jF-IeH" secondAttribute="centerX" id="XeL-1P-6k9"/>
+                                    <constraint firstItem="JRx-qN-c0S" firstAttribute="height" secondItem="fYL-jF-IeH" secondAttribute="height" multiplier="0.8" id="mU2-ND-tmA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fYL-jF-IeH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="I0E-0g-Jij"/>
+                            <constraint firstItem="2sS-Ef-v9y" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="JkT-hR-q9u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2sS-Ef-v9y" secondAttribute="trailing" id="KlZ-Yl-267"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fYL-jF-IeH" secondAttribute="trailing" id="YRG-n0-jZV"/>
+                            <constraint firstItem="2sS-Ef-v9y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yih-Bo-GbX"/>
+                            <constraint firstItem="2sS-Ef-v9y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZkM-rW-8ac"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fYL-jF-IeH" secondAttribute="bottom" id="a4E-S8-qOe"/>
+                            <constraint firstItem="fYL-jF-IeH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cfe-zX-0Uc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnFirst" destination="828-X5-bup" id="9PZ-c5-6Ri"/>
+                        <outlet property="btnForth" destination="80o-6B-MuC" id="J85-va-03o"/>
+                        <outlet property="btnSecond" destination="yey-2d-2Jk" id="bR2-DP-f4y"/>
+                        <outlet property="btnThird" destination="xOB-Ve-LQy" id="H5d-ud-viD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.733133433283363" y="16.800000000000001"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BlueOff" width="600" height="600"/>
+        <image name="GreenOff" width="600" height="600"/>
+        <image name="RedOff" width="600" height="600"/>
+        <image name="YellowOff" width="600" height="600"/>
+    </resources>
 </document>
